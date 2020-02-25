@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Security>
+    <SecurityEntities>
+        <SecurityEntity>
+            <url-pattern>/purchase</url-pattern>
+            <user-roles>
+                <role>admin</role>
+                <role>user</role>
+            </user-roles>
+        </SecurityEntity>
+        <SecurityEntity>
+            <url-pattern>/success</url-pattern>
+            <user-roles>
+                <role>admin</role>
+                <role>user</role>
+            </user-roles>
+        </SecurityEntity>
+        <SecurityEntity>
+            <url-pattern>/order</url-pattern>
+            <user-roles>
+                <role>admin</role>
+                <role>user</role>
+            </user-roles>
+        </SecurityEntity>
+        <SecurityEntity>
+            <url-pattern>/admin</url-pattern>
+            <user-roles>
+                <role>admin</role>
+            </user-roles>
+        </SecurityEntity>
+    </SecurityEntities>
+</Security>
+

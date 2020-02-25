@@ -1,0 +1,48 @@
+<head>
+    <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+    <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+    <%@ page isELIgnored="false" %>
+    <%@ taglib tagdir="/WEB-INF/tags" prefix="tag" %>
+    <%@taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
+    <%@ taglib uri = "http://java.sun.com/jsp/jstl/fmt" prefix = "fmt" %>
+
+    <c:choose>
+        <c:when test="${empty sessionScope.lang}">
+            <fmt:setLocale value="${cookie['lang'].value}"/>
+        </c:when>
+        <c:otherwise>
+            <fmt:setLocale value="${sessionScope.lang}"/>
+        </c:otherwise>
+    </c:choose>
+    <fmt:setBundle basename="messages"/>
+
+    <base href="">
+    <title>CarShop &mdash; Colorlib e-Commerce Template</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mukta:300,400,700">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" type="text/css" href="style/fonts/icomoon/style.css">
+    <link rel="stylesheet" type="text/css" href="style/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="style/css/magnific-popup.css">
+    <link rel="stylesheet" type="text/css" href="style/css/jquery-ui.css">
+    <link rel="stylesheet" type="text/css" href="style/css/owl.carousel.min.css">
+    <link rel="stylesheet" type="text/css" href="style/css/owl.theme.default.min.css">
+
+
+    <link rel="stylesheet" href="style/css/aos.css">
+
+    <link rel="stylesheet" href="style/css/style.css">
+
+    <script src="style/js/plugin/jquery-3.3.1.min.js"></script>
+    <script src="style/js/plugin/jquery-ui.js"></script>
+    <script src="style/js/plugin/popper.min.js"></script>
+    <script src="style/js/plugin/bootstrap.min.js"></script>
+    <script src="style/js/plugin/owl.carousel.min.js"></script>
+    <script src="style/js/plugin/jquery.magnific-popup.min.js"></script>
+    <script src="style/js/plugin/aos.js"></script>
+    <script src="style/js/add-cart.js"></script>
+
+</head>
